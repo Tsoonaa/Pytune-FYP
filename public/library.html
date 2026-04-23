@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PYTUNE | My Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <header class="main-header">
+        <a href="index.html" class="logo-link">PYTUNE</a>
+        <nav class="nav-links">
+            <a href="discover.html">Discover</a>
+            <a href="library.html" class="active">My Library</a>
+            <a href="analytics.html">Analytics</a>
+        </nav>
+        <div class="header-actions">
+            <span id="auth-status"></span>
+            <button id="auth-action-btn">Logout</button>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div id="library-header" class="page-header-container">
+            <h1 class="hero-title">Your Library</h1>
+            <button id="back-to-lib" class="preview-btn" style="display: none;">← Back to Playlists</button>
+        </div>
+        <div id="playlists-root"></div>
+    </main>
+
+    <div id="custom-playlist-modal" class="context-menu" style="display: none;">
+        <div class="modal-header">
+            <h3>Create Playlist</h3>
+            <button id="close-library-modal" class="close-btn">&times;</button>
+        </div>
+        <div class="modal-footer" style="border-top: none; padding-top: 0;">
+            <input type="text" id="library-playlist-input" class="modal-input" placeholder="Name your playlist..." autocomplete="off">
+            <button id="submit-new-playlist" class="modal-submit">Create Playlist</button>
+        </div>
+    </div>
+
+    <script type="module" src="library-script.js"></script>
+</body>
+</html>

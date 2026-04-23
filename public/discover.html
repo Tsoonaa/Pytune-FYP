@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PYTUNE | Discover</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <header class="main-header">
+        <a href="index.html" class="logo-link">PYTUNE</a>
+        <nav class="nav-links">
+            <a href="discover.html" class="active">Discover</a>
+            <a href="library.html">My Library</a>
+            <a href="analytics.html">Analytics</a>
+        </nav>
+        <div class="header-actions">
+            <span id="auth-status"></span>
+            <button id="auth-action-btn">Login</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="now-playing-container">
+            <div class="now-playing-flex">
+                <div class="now-playing-info"> 
+                    <p class="now-playing-label">Now Seeding</p>
+                    <h2 id="current-song-info">Loading Seed...</h2>
+                </div>
+                <button id="master-play-btn">▶ Play Seed</button>
+            </div>
+        </div>
+
+        <div id="cards-container" class="grid-layout"></div>
+
+        <div class="refresh-container" style="margin-top: 50px;">
+            <button id="new-search-btn" class="preview-btn">Change Seed Song</button>
+        </div>
+    </main>
+
+    <div id="playlist-menu" class="context-menu" style="display: none;">
+        <div class="modal-header">
+            <h3>Add to Playlist</h3>
+            <button id="close-modal" class="close-btn">&times;</button>
+        </div>
+        <div id="playlist-options-list"></div>
+        <div class="modal-footer">
+            <input type="text" id="new-playlist-name" class="modal-input" placeholder="New Playlist Name..." autocomplete="off">
+            <button id="create-playlist-btn" class="modal-submit">Create & Save</button>
+        </div>
+    </div>
+
+    <audio id="player" style="display: none;"></audio>
+
+    <script type="module" src="discover-script.js"></script>
+</body>
+</html>

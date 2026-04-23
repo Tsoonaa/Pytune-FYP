@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PYTUNE | ML Analytics</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:,">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <a href="index.html" class="logo-link">PYTUNE</a>
+        <nav class="nav-links">
+            <a href="discover.html">Discover</a>
+            <a href="library.html">My Library</a>
+            <a href="analytics.html" class="active">Analytics</a>
+        </nav>
+        <div class="header-actions">
+            <span id="auth-status"></span>
+            <button id="auth-action-btn">Login</button>
+        </div>
+    </header>
+
+    <div class="container wide-container">
+        <div class="page-header-container">
+            <h1 class="hero-title">Your Aural Signature</h1>
+            <p class="hero-subtitle">Visualising your musical DNA through Explainable AI.</p>
+        </div>
+
+        <div class="analytics-grid">
+            <div class="chart-container">
+                <h3>Aural Signature (Mean Vector Drift)</h3>
+                <p class="chart-subtitle">Your starting track vs. where your taste drifted</p>
+                <canvas id="radarChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h3>Discovery Sources</h3>
+                <p class="chart-subtitle">Did you prefer songs found by Genre or by Artist?</p>
+                <canvas id="queryChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h3>Dominant Musical Traits</h3>
+                <p class="chart-subtitle">Which acoustic features do you gravitate towards most?</p>
+                <canvas id="featureChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h3>Structural Preference Distribution</h3>
+                <p class="chart-subtitle">Frequency of selected track complexities</p>
+                <canvas id="complexityChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="analytics-script.js"></script>
+</body>
+</html>

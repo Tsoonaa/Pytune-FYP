@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PYTUNE | Search</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <header class="main-header">
+        <a href="index.html" class="logo-link">PYTUNE</a>
+        <nav class="nav-links">
+            <a href="discover.html">Discover</a>
+            <a href="library.html">My Library</a>
+            <a href="analytics.html">Analytics</a>
+        </nav>
+        <div class="header-actions">
+            <span id="auth-status"></span>
+            <button id="auth-action-btn">Login</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-header-container" style="text-align: center; margin-top: 10vh;">
+            <h1 class="hero-title">Discover your musical DNA.</h1>
+            <p class="hero-subtitle">Enter a track to begin the algorithmic deep-dive.</p>
+            
+            <div style="display: flex; justify-content: center; align-items: center; gap: 15px; margin-top: 30px;">
+                <input 
+                    type="text" 
+                    id="user-input" 
+                    class="modal-input" 
+                    style="max-width: 400px; margin: 0; font-size: 1.1rem;" 
+                    placeholder="e.g. Bohemian Rhapsody..." 
+                    autocomplete="off"
+                >
+                <button id="search-btn" class="primary-btn">Initialise Algorithm</button>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="index-script.js"></script>
+</body>
+</html>
